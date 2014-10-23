@@ -1,5 +1,19 @@
+/**
+ * Contains a method to draw the slot machine.
+ *
+ * Contains a method to draw the slot machine.
+ */
 public class Graphics {
 
+    /**
+     * Draws the slot machine using ASCII in the console.
+     *
+     * Draws the slot machine using ASCII in the console.
+     *
+     * @param a Numeric value of a fruit.
+     * @param b Numeric value of a fruit.
+     * @param c Numeric value of a fruit.
+     */
     public static void draw(int a, int b, int c) {
         String border = "*";
         int borderWidth = 15;
