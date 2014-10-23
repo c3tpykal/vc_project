@@ -18,6 +18,20 @@ public class Engine {
     }
 
     /**
+     * Generates a random number between 0 and 2.
+     *
+     * Generates a random number between 0 and 2 representing a fruit.
+     * 
+     * @return Random integer from 0 to 2. Represents a fruit.
+     */
+     public int randomize() {
+         Random randomGenerator = new Random();
+         int randomInt = randomGenerator.nextInt(3);
+
+         return randomInt;
+     }
+
+    /**
      * Contains the game loop.
      *
      * Contains the game loop. Game continues until player wins or
