@@ -54,6 +54,32 @@ public class Engine {
         if (input == "q") {
             gameIsOn = false;
         }
+     }
+
+    /**
+     * Checks if the victory condition is true.
+     * 
+     * Checks if the victory condition is true. All three slots must've the same value to win.
+     *
+     * @param rolls Array containing the slots' values.
+     * @return A boolean. True if victory.
+     */
+    public boolean win(int[] rolls) {
+        boolean value = false;
+
+        for (int i = 0; i < rolls.length - 1; i++) {
+
+            if (rolls[i] != rolls[i + 1]) {
+                value = false; // ei tarvita koska alustettu metodin alussa
+//                                System.out.println("Not the same!" + rolls[i] + "" + rolls[i+1] + value);
+                return value; // break; rikkois silmukan ilman ylimääräistä returnia 
+            } else {
+                value = true;
+//                               System.out.println("Is the same"  + rolls[i] + "" + rolls[i+1] + value);
+            }
+        }
+
+        return value;
     }
 
     /**
