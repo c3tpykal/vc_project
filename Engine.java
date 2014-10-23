@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * Contains the game mechanics.
  *
@@ -79,7 +81,7 @@ public class Engine {
             } else {
                 value = true;
 //          System.out.println("Is the same"  + rolls[i] + "" +
-                                rolls[i+1] + value);
+//                                rolls[i+1] + value);
             }
         }
 
