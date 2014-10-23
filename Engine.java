@@ -17,11 +17,41 @@ public class Engine {
         loop();
     }
 
+    /**
+     * Contains the game loop.
+     *
+     * Contains the game loop. Game continues until player wins or
+     * ends the game by entering 'q'.
+     */
     public void loop() {
+        gameIsOn = true;
 
-        while(gameIsOn) {
+        // beginning messages, drawing the board the first time
+        // and start the first round
+        intro();
 
-            gameIsOn = false;
+        while (gameIsOn) {
+
+            // randomizes the fruits
+            for (int i = 0; i < fruits.length; i++) {
+                fruits[i] = randomize();
+            }
+
+            // draws the "machine"
+            Graphics.draw(fruits[0], fruits[1], fruits[2]);
+
+            // win check
+            gameIsOn = !win(fruits);
+
+            // status messages
+            if (gameIsOn) {
+                System.out.println("Bad luck! Try again!");
+                // player's input
+                playerInput();
+            } else {
+                System.out.println("DING DING DING");
+                System.out.println("You win!");
+            }
         }
     }
 }
