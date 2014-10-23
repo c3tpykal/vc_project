@@ -5,6 +5,7 @@
  * to be lucky and have all three slots be the same type.
  */
 public class Game {
+
        /**
         * Initiates the slot-machine game.
         * 
