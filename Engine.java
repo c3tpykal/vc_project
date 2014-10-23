@@ -58,8 +58,9 @@ public class Engine {
 
     /**
      * Checks if the victory condition is true.
-     * 
-     * Checks if the victory condition is true. All three slots must've the same value to win.
+     *
+     * Checks if the victory condition is true.
+     * All three slots must've the same value to win.
      *
      * @param rolls Array containing the slots' values.
      * @return A boolean. True if victory.
@@ -71,15 +72,32 @@ public class Engine {
 
             if (rolls[i] != rolls[i + 1]) {
                 value = false; // ei tarvita koska alustettu metodin alussa
-//                                System.out.println("Not the same!" + rolls[i] + "" + rolls[i+1] + value);
-                return value; // break; rikkois silmukan ilman ylimääräistä returnia 
+            // System.out.println("Not the same!" +
+            // rolls[i] + "" + rolls[i+1] + value);
+                return value; // break; rikkois silmukan ilman
+                              //  ylimääräistä returniar
             } else {
                 value = true;
-//                               System.out.println("Is the same"  + rolls[i] + "" + rolls[i+1] + value);
+//          System.out.println("Is the same"  + rolls[i] + "" +
+                                rolls[i+1] + value);
             }
         }
 
         return value;
+    }
+
+    /**
+     * Contains the greeting message and how to play the game.
+     *
+     * Contains the greeting message and how to play the game.
+     */
+    public void intro() {
+        Graphics.draw(fruits[0], fruits[1], fruits[2]);
+
+        System.out.println("Hello player!");
+        System.out.println("How to play: press Enter!");
+        System.out.println("To exit: input q");
+        playerInput();
     }
 
     /**
