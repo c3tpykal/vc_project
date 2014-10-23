@@ -43,6 +43,20 @@ public class Engine {
     }
 
     /**
+     * Checks player's input.
+     *
+     * Checks player's input. Enter (or anything else than 'q') continues
+     * the game. 'q' ends the game.
+     */
+    public void playerInput() {
+        String input = (new java.util.Scanner(System.in)).nextLine();
+
+        if (input == "q") {
+            gameIsOn = false;
+        }
+    }
+
+    /**
      * Contains the game loop.
      *
      * Contains the game loop. Game continues until player wins or
