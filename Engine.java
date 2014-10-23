@@ -5,14 +5,25 @@
  */
 public class Engine {
 
+    /**
+     * Contains the fruits as integer values.
+     *
+     * Contains the fruits as integer values.
+     */
     private int[] fruits = {1, 2, 3};
+
+    /**
+     * Acts as a check to the loop.
+     *
+     * Acts as a check to the loop.
+     */
     private boolean gameIsOn = true;
 
     /**
      * Constructs an "engine" and calls the loop-method.
      *
      * Constructs an "engine" and calls the loop-method.
-     **/
+     */
     public Engine() {
         loop();
     }
@@ -21,15 +32,15 @@ public class Engine {
      * Generates a random number between 0 and 2.
      *
      * Generates a random number between 0 and 2 representing a fruit.
-     * 
+     *
      * @return Random integer from 0 to 2. Represents a fruit.
      */
-     public int randomize() {
-         Random randomGenerator = new Random();
-         int randomInt = randomGenerator.nextInt(3);
+    public int randomize() {
+        Random randomGenerator = new Random();
+        int randomInt = randomGenerator.nextInt(3);
 
-         return randomInt;
-     }
+        return randomInt;
+    }
 
     /**
      * Contains the game loop.
